@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock title %}
+
+{% block body %}
+
+<div class="container-fluid px-0 mb-3">
+    <img src="/static/register1.jfif" class="d-block w-100 mx-0" alt="...">
+</div>
+<div class="container py-4">
+    <h2 class="text-center">Join Us</h2>
+<form method="post" action="register">
+    {% csrf_token %}
+  <div class="form-group">
+    <label for="first_name">First Name</label>
+    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter your name">
+  </div>
+  <div class="form-group">
+    <label for="last_name">Last name</label>
+    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter your last name">
+  </div>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+  </div>
+  <div class="form-group">
+    <label for="pa1">Enter the password</label>
+    <input type="password" class="form-control" id="pa1" name="password1" placeholder="Enter you password"></input>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+</div>
+
+<div>
+  {% for message in messages %}
+  <h3> {{message}} </h3>
+  {% endfor %}
+</div>
+
+{% endblock body %}

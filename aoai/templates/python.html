@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+
+{% block title %}Python{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0 mb-3">
+    <img src="/static/python.jfif" class="d-block w-100 mx-0" alt="...">
+</div>
+<hr class="featurette-divider my-4">
+<div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Importance of Algorithms<br> <span class="text-muted">First write, then code.</span></h2>
+        <p class="lead">If writing code were a science, all developers would pretty much be the same.
+Just as in art, no two developers have the same thinking or perception or the subjective truth while writing code for the same outcome.
+While some struggle to produce the desired outcome, to a few, it comes almost naturally, as if an epiphany hits them at the moment they sit to create programs or solve a problem.
+So that brings us to the quintessential question.
+How do you identify a GREAT developer?
+To my eye, all GREAT developers have 3 important traits.
+· Perseverance — To find the solution come what may
+· Practice — Keep honing their skills as a continual activity
+· Proactiveness — a deep ability to connect details to the larger picture
+And then, there’s one important quality they all share as well which builds the above traits in them.
+That is self-motivation.
+Yes. GREAT developers are self-driven people and have an extraordinary will to push through any odds. The willingness to stay motivated with a problem until it’s resolved (not to be confused with sitting on a problem), coupled with the ability to creatively solve it, is a highly desired skill or aptitude found only in great developers.
+The biggest goal of such self-motivated developers is to get into a mindset where they produce high-quality software all the time, regardless of the obstacles, problems, and self-doubt they encounter.
+And this mindset can be developed by following the teachings of a person who lived 2000 years ago.
+He was a philosopher, a king and had developed the reputation of being an ideal, wise leader. Plato called him the “philosopher king” in respect.
+He was Marcus Aurelius, one of the “five good emperors” in Roman history.
+Marcus has remained relevant for 2,000 years largely due to his writings collected as “ Meditations,” which President Bill Clinton has said is one of his favorite books. “Meditations” is closer to a diary than a philosophical treatise.
+As it turned out, Marcus Aurelius no matter where he was, even on the battlefield, he self-reflected and wrote his thoughts in this diary. This document is the definitive text on humility, self-discipline, personal ethics, strength, and is considered one of the best philosophy works of all time.
+And this book is also one of the best motivational guides available to software developers to be GREAT in their jobs.
+And some of the mind-blowing lessons we can learn from Marcus Aurelius can be as below.
+Obstacles and Challenges cannot stop you.
+“The impediment to action advances action. What stands in the way becomes the way.”
+A developer earns his bread by solving problems. We all love to be able to do something creative for the world, for our customer. We love the accolades and the appreciations that come along with it.
+But life is not always a bunch of roses.
+</p>
+      </div>
+      <div class="col-md-5">
+          <img src="/static/pip2.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+<hr class="featurette-divider">
+<div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Want to be a pythonist? <span class="text-muted">Don't think just Get started</span></h2>
+        <p class="lead">Python is an high level general-purpose language. It’s dynamically typed and garbage-collected. It supports many programming paradigms: procedural, object-oriented, and functional. Historically, Python was conceived as a successor to the ABC language. Python strives to make developers happy by its simpler, less-cluttered syntax and grammar.
+In the Zen of Python, highlights from the language philosophy includes:
+Beautiful is better than ugly
+Explicit is better than implicit
+Simple is better than complex
+Complex is better than complicated
+Readability counts
+No wonder Python’s popularity has been growing. According to Stackoverflow blog, the usage is growing more than any other language.
+
+Image from StackFlowBlog
+In this article, I have compiled 20 useful Python tricks for the beginner. Whether you’ve just picked up a Python programming book or you have gone through one or two projects, some or all of these tricks may be helpful for your future projects.
+String
+Trick #1 Reversing String
+a=”new”
+print(“Reverse is”, a[::-1])
+Output: Reverse is wen
+Trick #2 Splitting String into multiples
+a="Who Are You"
+b=a.split()
+print(b)
+Output: [‘Who’, ‘Are’, ‘You’]
+Trick #3 Printing out multiples of strings
+print(“me”*8+’ ‘+”no”*10)
+Output: memememememememe nononononononononono<br>Trick #4 Creating a single string
+a = [“I”, “am”, “here”]
+print(“ “.join(a))
+Output: I am here
+Trick #5 Check if two words are anagrams
+from collections import Counter
+def is_anagram(str1, str2):
+ return Counter(str1) == Counter(str2)
+print(is_anagram(‘geek’, ‘eegk’))
+print(is_anagram(‘geek’, ‘peek’))
+Output:
+True
+False
+List
+Trick #6 Flatten Lists
+import itertools
+a = [[1, 2], [3, 4], [5, 6]]
+b = list(itertools.chain.from_iterable(a))
+print(b)
+Output: [1, 2, 3, 4, 5, 6]
+Trick #7 Reverse a list
+a=[“10”,”9",”8",”7"]
+print(a[::-1])
+Output: [‘7’, ‘8’, ‘9’, ‘10’]
+Trick #8 Unpack list in quick loop
+a=[“10”,”9",”8",”7"]
+for e in a:
+    print(e)
+Output:
+10
+9
+8
+7
+Trick #9 Combining two lists
+a=[‘a’,’b’,’c’,’d’]
+b=[‘e’,’f’,’g’,’h’]
+for x, y in zip(a, b):
+ print(x,y)
+Output:
+a e
+b f
+c g
+d h
+Trick #10 Negative Indexing Lists
+a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+a[-3:-1]
+Output:
+[8, 9]
+Trick #11 Check for most frequent on the list
+a = [1, 2, 3, 4, 2, 2, 3, 1, 4, 4, 4]
+print(max(set(a), key = a.count))
+Output:
+4
+Matrix
+Trick #12 Transposing a matrix
+mat = [[1, 2, 3], [4, 5, 6]]
+new_mat=zip(*mat)
+for row in new_mat:
+ print(row)
+Output:
+(1, 4)
+(2, 5)
+(3, 6)
+Operators
+Trick #13 Chaining comparison operators
+a = 5
+b = 10
+c = 3
+print(c < a)
+print(a < b)
+print(c < a < b)
+Output:
+True
+True
+True
+Dictionary
+Trick #14 Inverting Dictionary
+dict1={‘a’: 1, ‘b’: 2, ‘c’: 3, ‘d’: 4}
+dict2={v: k for k, v in dict1.items()}
+print(dict2)
+Output:
+{1: ‘a’, 2: ‘b’, 3: ‘c’, 4: ‘d’}
+Trick #15 Iterating over dictionary key and value pairs
+dict1={‘a’: 1, ‘b’: 2, ‘c’: 3, ‘d’: 4}
+for a, b in dict1.iteritems():
+ print (‘{: {}’.format(a,b))
+Output:
+a: 1
+b: 2
+c: 3
+d: 4
+Trick #16 Merging Dictionaries
+x = {'a': 1, 'b': 2}
+y = {'b': 3, 'c': 4}
+z = {**x, **y}
+print(z)
+Output:
+{‘a’: 1, ‘b’: 3, ‘c’: 4}
+Initialization
+Trick #17 Initializing empty containers
+a_list = list()
+a_dict = dict()
+a_map = map()
+a_set = set()
+Trick #18 Initializing List filled with some numbers
+#listA contains 1000 0's
+listA=[0]*1000
+#listB contains 1000 2's
+listB=[2]*1000
+Misc
+Trick #19 Check Memory Usage of An Object
+import sys
+a=10
+print(sys.getsizeof(a))
+Output: 28
+Trick #20 Swapping Values
+x, y = 1, 2
+x, y = y, x
+print(x, y)
+Output:
+2 1
+</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="/static/pip1.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+<hr class="featurette-divider">
+<div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Always think out of the box<br> <span class="text-muted">Because programming is an art!</span></h2>
+        <p class="lead">My opinion has long been that software development is a creative endeavor, and I was very excited this weekend when I stumbled across an article by Don Knuth published in the December, 1974 issue of CACM titled Computer Programming is an Art. It caught my attention not only because it resonated so strongly with what I’ve found to be true in practice, but also because of its age and the low frequency with which my usual Google searches turn up articles of this vintage.
+
+We software developers owe a lot to Don Knuth. His work on the analysis of the computational complexity of algorithms laid the groundwork of one of my favorite courses in college (Introduction to Algorithms with Steve Seidel). And Don’s description of where science and art meet in computer programming is very good as well.
+
+Art vs. Science
+Knuth begins the article with a history and evolution of the meaning of the terms “art” and “science” and proposes the following guideline for classification:
+
+Science is knowledge which we understand so well that we can teach it to a computer; and if we don’t fully understand something, it is an art to deal with it. Since the notion of an algorithm or a computer program provides us with an extremely useful test for the depth of our knowledge about any given subject, the process of going from an art to a science means that we learn how to automate something.
+
+By this definition, I agree with Knuth and similarly place most of what we do in the art category. Though we have a scientific understanding that forms the basis of our work, what we do as we write software cannot yet be fully taught to a computer. And if most of what we do is art, then Knuth declares his goal as an educator is to “…help people learn how to write beautiful programs.”</p>
+      </div>
+      <div class="col-md-5">
+        <img src="/static/pip3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+<hr class="featurette-divider">
+{% endblock body %}
